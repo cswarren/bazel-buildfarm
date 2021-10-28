@@ -5,7 +5,7 @@ pkg_rpm(
     data = [
         ":worker-service",
         "//examples:example_configs",
-        "//src/main/java/build/buildfarm:buildfarm-shard-worker_deploy.jar",
+        "//src/main/java/build/buildfarm:buildfarm-memory-worker_deploy.jar",
         "//src/main/java/build/buildfarm:configs",
     ],
     release = "0",

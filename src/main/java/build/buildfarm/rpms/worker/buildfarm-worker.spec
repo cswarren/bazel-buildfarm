@@ -29,7 +29,7 @@ log_dir=%{buildroot}/var/log/buildfarm-worker
 service_dir=%{buildroot}/%{_unitdir}
 
 mkdir -p $app_dir
-cp {buildfarm-shard-worker_deploy.jar} $app_dir
+cp {buildfarm-memory-worker_deploy.jar} $app_dir
 cp {logging.properties} $app_dir
 mkdir -p $config_dir
 cp {shard-worker.config.example} $config_dir/worker.config
@@ -38,7 +38,7 @@ mkdir -p $service_dir
 cp {buildfarm-worker.service} $service_dir/%{name}.service
 
 %files
-/usr/local/buildfarm-worker/buildfarm-shard-worker_deploy.jar
+/usr/local/buildfarm-worker/buildfarm-memory-worker_deploy.jar
 %attr(644, root, root) /usr/local/buildfarm-worker/logging.properties
 %attr(644, root, root) %{_unitdir}/%{name}.service
 %attr(644, root, root) %{_sysconfdir}/buildfarm-worker/config/worker.config
